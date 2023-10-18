@@ -1,0 +1,328 @@
+* {
+    margin: 0px;
+    padding: 0xp;
+    box-sizing: border-box;
+}
+
+/* HEADER CONTAINER  */
+body,html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+}
+
+.nav__container {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(to right, #3498db, #e60073);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 3px;
+}
+
+.nav__container .main__heading {
+    font-weight: 500;
+    font-size: 1.7rem;
+    width: 40%;
+    text-align: center;
+    background-image: linear-gradient(45deg, #f06, #28d);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #e60073, 0 0 30px #e60073;
+    }
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #e60073, 0 0 40px #e60073;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #e60073, 0 0 30px #e60073;
+    }
+}
+.homeBTN{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.homeBTN::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s;
+}
+.homeBTN:hover::before{
+    transform: scaleX(1);
+}
+/* MAIN CONTAINER  */
+.overAll__container{
+    max-height: 100vh;
+    background-color: rgb(233, 245, 219);
+}
+.main__container {
+    height:90vh;
+    display: flex;
+
+}
+
+.main__container .cards__container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main__container .card__container {
+    cursor: pointer;
+    padding: 20px;
+    width: max-content;
+    height: 100px;
+    background-color: rgb(114, 109, 109);
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.main__container .card__container .card__heading {
+    font-weight: 400;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8)
+}
+
+.main__container .card__container .card__details {
+    padding-left: 2px;
+    padding-right: 2px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #e60073, 0 0 30px #e60073;
+}
+
+.main__container .card__container button{
+    /* border: none; */
+    /* border-radius: 5px; */
+    padding: 2px 8px;
+    display: inline-block;
+    /* padding: 10px 20px; */
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.card__container button:hover{
+    background-color: rgb(154, 150, 150);
+}
+
+.main__container .insert__card{
+    background-color:rgb(214, 140, 69)
+}
+.main__container .update__card{
+    background-color: rgb(232, 93, 4);
+}
+.main__container .search__card{
+    background-color: rgb(102, 155, 188);
+}
+.main__container .delete__card{
+    background-color:rgb(193, 18, 31);
+}
+
+/* CONTENT CONTAINER  */
+
+
+.content__container{
+    width: 70%;
+    display: grid;
+    place-content: center;
+}
+
+.content__container .showStudentData__table{
+    display: block;
+    border-collapse: collapse;
+    font-family: Tahoma, Geneva, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    
+}
+.hide{
+    display: none;
+}
+.content__container .showStudentData__table thead th{
+    background-color: #54585d;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 1.5rem;
+	border: 1px solid #54585d;
+    padding:15px;
+
+}
+
+.content__container .showStudentData__table tbody td{
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px;
+    color: #636363;
+	border: 1px solid #dddfe1;
+}
+.content__container .showStudentData__table tbody tr{
+    background-color: #f9fafb;
+}
+.content__container .showStudentData__table tbody tr:nth-child(odd){
+    background-color: #ffffff;
+}
+
+.content__container .insertData__container{
+    max-width: 100%;
+    min-height: 80%;
+    background-color:rgb(214, 140, 69);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 30px;
+    background-image: linear-gradient(45deg, #f06, #28d);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.content__container .insertData__container h2{
+    text-align: center;
+}
+.content__container .insertData__container form{
+    height: max-content;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-evenly;
+}
+.content__container .insertData__container form label{
+    font-size: 1.3rem;
+}
+.content__container .insertData__container form div{
+    display: flex;
+flex-direction: column;
+line-height: 1.5;
+}
+.content__container .insertData__container form div input{
+    width: 20.5rem;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: inherit;
+    border: none;
+    border-radius: 10px;
+
+}
+.content__container .insertData__container form .submit{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color:rgb(0, 119, 182);
+}
+.content__container .updateData__container{
+    background-color: rgb(232, 93, 4);
+}
+.content__container .deleteData__container{
+    background-color:rgb(193, 18, 31);
+}
+.content__container .searchData__container{
+    background-color: rgb(102, 155, 188);
+}
+.content__container .updateData__container, .deleteData__container, .searchData__container{
+    max-width: 100%;
+    height: 100%;
+    /* color: whitesmoke; */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
+    background-image: linear-gradient(45deg, #f06, #28d);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.content__container .updateData__container h2, .deleteData__container h2, .searchData__container h2{
+    text-align: center;
+}
+.content__container .updateData__container form, .deleteData__container form, .searchData__container form{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-evenly;
+}
+.content__container .updateData__container form div , .deleteData__container form div , .searchData__container form div{
+    display: flex;
+    flex-direction: column;
+    line-height: 3;
+}
+.content__container .updateData__container form label , .deleteData__container form label , .searchData__container form label{
+    font-size: 1.3rem;
+
+}
+.content__container .updateData__container form div input, .deleteData__container form div input, .searchData__container form div input{
+    width: 20.5rem;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: inherit;
+    border: none;
+    border-radius: 10px;
+}
+.content__container .updateData__container form .submit, .deleteData__container form .submit, .searchData__container form .submit{
+    margin-top: 25px;
+    /* background-color:rgb(79, 112, 156); */
+    background: blue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.content__container .updateData__container form .submit:hover, .deleteData__container form .submit:hover, .searchData__container form .submit:hover{
+    background: linear-gradient(to right, #9933FF, #3399FF, #33FF33, #FFFF00, #FF9900, #FF0000);}
+.content{
+    display: none;
+    
+}
+
+.show{
+    display: block;
+}
+
+#modify__studentDataForm{
+    display: none;
+}
+#searched_datas__container{
+    display: none;
+}
+.searchData__container #searched_datas__container{
+    margin-top:30px ;
+    border-collapse: collapse;
+    width: 100%;
+}
+.searchData__container #searched__datas th{
+    font-size: 1.3rem;
+}
+.searchData__container #searched_datas__container td{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.searchData__container #searched_datas__container th,td{
+    border: 1px solid black;
+    padding: 20px;
+}

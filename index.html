@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>studentManagementSystem</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+<div class="overAll__container">
+    <!-- HEADER CONTAINER  -->
+    <div class="nav__container">
+        <h1 class="main__heading">StudentManagementSystem</h1>
+     
+            <button id="homeBTN" class="homeBTN" type="button">HOME</button>
+        
+    </div>
+    <!-- MAIN CONTAINER  -->
+    <div class="main__container">
+        <!-- CARDS CONTAINER  -->
+        <div id="cards__container" class="cards__container">
+            <div id="INSERT_DATA" class="card__container insert__card ">
+                <h2 class="card__heading">INSERT DATA</h2>
+                <p class="card__details">
+                    click to INSERT student data
+                </p>
+                <button type="button" id="insertBTN">INSERT</button>
+            </div>
+            <div id="UPDATE_DATA" class="card__container update__card">
+                <h2 class="card__heading">UPDATE DATA</h2>
+                <p class="card__details">
+                    click to UPDATE student data
+                </p>
+                <button type="button" id="updateBTN">UPDATE</button>
+
+            </div>
+            <div id="DELETE_DATA" class="card__container delete__card">
+                <h2 class="card__heading">DELETE DATA</h2>
+                <p class="card__details">
+                    click to DELETE student data
+                </p>
+                <button type="button" id="deleteBTN">DELETE</button>
+            </div>
+            <div id="SEARCH_DATA" class="card__container search__card">
+                <h2 class="card__heading">SEARCH DATA</h2>
+                <p class="card__details">
+                    click to SEARCH student data
+                </p>
+                <button type="button" id="searchBTN">SEARCH</button>
+            </div>
+        </div>
+        <!-- CONTENT CONTAINER  -->
+        <div class="content__container">
+            <div class="showStudentData__container">
+                <table class="showStudentData__table">
+                    <thead>
+                        <tr>
+                            <th>RollNo</th>
+                            <th>Student Name</th>
+                            <th>Department</th>
+                            <th>Academic Year</th>
+                        </tr>
+                    </thead>
+                  <tbody class="student__list">
+                </tbody>
+                </table>
+            </div>
+            <div class="insertData__container content " id="insertData__container" >
+            <h2>INSERT STUDENT DATA </h2>
+            <form id="studentDataForm"  >
+                <div>
+                    <label for="rollNo">RollNo: </label>
+                    <input id="rollNo" type="text" name="rollNo" placeholder="Enter your Roll Number" required>
+                </div>
+                <div>
+                    <label for="name">Name: </label>
+                    <input id="Studentname" type="text" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div>
+                    <label for="department">Department: </label>
+                    <input id="department" type="text" name="department" placeholder="Enter your department" required>
+                </div>
+                <div>
+                    <label for="AcademicYear">Academic year: </label>
+                    <input id="AcademicYear" type="text" name="AcademicYear" placeholder="Enter your AcademicYear" required>
+                </div>
+                <div>
+                    <input class="submit" type="submit" name="submit" value="Submit">
+                </div>
+            </form>
+            </div>
+            <div class="updateData__container content " id="updateData__container" >
+                <h2>UPDATE DATA</h2>
+                <form id="updateData_form_login">
+                    <div>
+                        <label for="rollNoFor__update">Roll No: </label>
+                        <input type="text" id="rollNoFor__update" name="rollNoFor__update" placeholder="Enter your roll number">
+                    </div>
+                    <div>
+                        <label for="nameFor__update">Name: </label>
+                        <input type="text" id="nameFor__update" name="nameFor__update" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <input class="submit" type="submit" value="Submit">
+                    </div>
+                </form>
+                <form id="modify__studentDataForm" >
+                    <div>
+                        <label for="ModifyrollNo">rollNo: </label>
+                        <input id="ModifyrollNo" type="text" name="ModifyrollNo" placeholder="Enter your Roll Number" required>
+                    </div>
+                    <div>
+                        <label for="ModifyStudentname">name: </label>
+                        <input id="ModifyStudentname" type="text" name="name" placeholder="Enter your name" required>
+                    </div>
+    
+                    <div>
+                        <label for="Modifydepartment">Department: </label>
+                        <input id="Modifydepartment" type="text" name="Modifydepartment" placeholder="Enter your department" required>
+                    </div>
+                    <div>
+                        <label for="ModifyAcademicYear">Academic year: </label>
+                        <input id="ModifyAcademicYear" type="text" name="ModifyAcademicYear" placeholder="Enter your AcademicYear" required>
+                    </div>
+                    <div>
+                        <input class="submit" type="submit" name="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <div class="deleteData__container content " id="deleteData__container" >
+                <h2>DELETE DATA</h2>
+                <form id="deleteData__form">
+                    <div>
+                        <label for="rollNoFor__delete">Roll No: </label>
+                        <input type="text" id="rollNoFor__delete" name="rollNoFor__delete" placeholder="Enter your roll number">
+                    </div>
+                    <div>
+                        <label for="nameFor__delete">Name: </label>
+                        <input type="text" id="nameFor__delete" name="nameFor__delete" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <input class="submit" type="submit" value="Submit">
+                    </div>
+                </form>
+                </div>
+            <div class="searchData__container content " id="searchData__container" >
+                <h2>SEARCH DATA</h2>
+                <form id="searchData__form">
+                    <div>
+                        <label for="rollNo__search">Roll No: </label>
+                    <input type="text" id="rollNo__search" name="rollNo__search" placeholder="Enter your roll number">
+                </div>
+                <div>
+                    <label for="nameFor__search">Name: </label>
+                    <input type="text" id="nameFor__search" name="nameFor__search" placeholder="Enter your name">
+                </div>
+                <div>
+                    <input class="submit" type="submit" value="Submit">
+                </div>
+            </form>
+            <table id="searched_datas__container">
+                <tr>
+                    <th>RollNo</th>
+                    <th>StudentName</th>
+                    <th>Department</th>
+                    <th>AcademicYear</th>
+                </tr>
+                <tr>
+                    <td id="showSearchedRollNo"></td>
+                    <td id="showSearchedName"></td>
+                    <td id="showSearchedDepartment"></td>
+                    <td id="showSearchedAcademicYear"></td>
+                </tr>
+            </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
