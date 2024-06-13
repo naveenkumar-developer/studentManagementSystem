@@ -1,2 +1,2 @@
 #PENDING
-[demo](https://github.com/naveenkumar-developer/studentManagementSystem.git)
+[demo](https://naveenkumar-developer.github.io/studentManagementSystem/)
