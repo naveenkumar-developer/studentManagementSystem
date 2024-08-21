@@ -1,2 +1,2 @@
-#PENDING
-[demo](https://naveenkumar-developer.github.io/studentManagementSystem/)
+[Project Demo](https://naveenkumar-developer.github.io/studentManagementSystem/)<br>
+#PENDING<br>
